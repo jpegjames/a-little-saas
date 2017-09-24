@@ -1,0 +1,17 @@
+<div class="notice warning">
+  For this sample app, try starting a new demo instead of logging in
+</div>
+
+<h2>Login</h2>
+
+<%= form_tag login_url do %>
+
+  <%= label_tag :login %>
+  <%= text_field_tag :login %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+
+  <%= submit_tag 'Login', class: 'button' %>
+
+<% end %>

@@ -1,0 +1,92 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  border-bottom: 1px #ccc solid;
+  color: #fff;
+
+  background: #00d2ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  h1 {
+    padding:  1rem 2rem 0;
+    font-size: 2em;
+    margin: 0.67em 0 0;
+  }
+
+  p {
+    padding: 0 2rem 1.15em;
+    margin-bottom: 1.5rem;
+  }
+
+  a, a:hover {
+    color: #fff;
+  }
+}
+
+.content {
+  padding: 2em;
+}
+
+article.post {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px dashed #ccc;
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+}
+
+.notice {
+  border-bottom: 2px solid #86A21C;
+  background: #b6e01b;
+  color: #03560b;
+  padding: 1em 2em;
+  margin-top: 1px;
+
+  &.warning {
+    background: #ffa005;
+    border-color: #965e03;
+    color: #3b2501;
+  }
+}
+
+.comments {
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .comment {
+
+  }
+
+  .new-comment {
+    margin-top: 4em;
+    max-width: 480px;
+  }
+}
+
+time {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+
+// Post form
+#post_title {
+  max-width: 450px;
+}
+#post_body {
+  min-height: 150px;
+}
+
+.button {
+  min-width: 150px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <nav>
+          <%= link_to 'Home', root_url %> &bull;
+          <%= link_to 'Login', login_url %> &bull;
+          <%= link_to 'Start Demo', '#' %>
+        </nav>
+
+        <h1><%= link_to 'Yet Another Blog Example', root_url %></h1>
+        <p>This is a sample app showcasing how you can use SQLite to create a unique demo environment</p>
+      </header>
+      <% if notice %>
+        <div class="notice"><%= notice %></div>
+      <% end %>
+
+      <% if Rails.env == 'development' %>
+        <!-- <div class="notice warning">
+          The app should be running in the 'demo' environment. Try:<br>
+          <code>rails server -e demo</code>
+        </div> -->
+      <% end %>
+
+      <div class="content">
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

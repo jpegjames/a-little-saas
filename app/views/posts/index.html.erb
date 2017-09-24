@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+  <article class="post">
+    <h2><%= link_to post.title, post %></h2>
+    <time datetime="<%= post.created_at %>"><%= post.created_at.strftime("Posted %m/%d/%Y") %></time>
+    <div class="text">
+      <%= post.body %>
+    </div>
+  </article>
+<% end %>
+
+
+<br>
+<% if current_user %>
+  <%= link_to 'New Post', new_post_path, class: 'button' %>
+<% end %>
