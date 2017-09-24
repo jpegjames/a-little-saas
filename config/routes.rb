@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
   get '/' => 'posts#index', as: 'root'
   resources :posts
   resources :comments, except: 'index'
