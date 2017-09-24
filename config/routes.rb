@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+
+  # This does not need to be accessible in the production environment
+  unless Rails.env.production?
+    get 'demos/new', as: 'new_demo'
+    post 'demos/create', as: 'demos'
+  end
 
   get '/' => 'posts#index', as: 'root'
   resources :posts
